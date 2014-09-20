@@ -33,9 +33,19 @@ public class NodeList<T extends node> {
 	
 	public boolean isConnected(T n)
 	{
-		return adjacent.contains(n);
+		 return adjacent.contains(n);
 	}
 	
+	
+	public void printNodeINFO()
+	{
+		System.out.print("Node "+identityNode.tag+" connections:");
+		for(int i=0;i<adjacent.size();i++)
+		{
+			System.out.print(" "+adjacent.get(0).tag);
+		}
+		System.out.println();
+	}
 	
 
 }
