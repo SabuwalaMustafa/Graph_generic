@@ -37,6 +37,5 @@ public class NodeList<T extends node> {
 	}
 	
 	
-	
 
 }
