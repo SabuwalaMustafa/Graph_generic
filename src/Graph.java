@@ -1,20 +1,29 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 
-
-public class Graph<T> {
+public class Graph<T extends node> {
 	
-	HashMap<String, ArrayList<node>> adjacencyList;
+	HashMap<String, NodeList<T>> adjacencyList;
 	
 	Graph(){
 		
 	}
 	
-	public boolean addNode(node N)
+	public boolean addNode(T N)
 	{
-	ArrayList<node> temp=new ArrayList<node>();
-	
+	if(!adjacencyList.containsKey(N.tag))	
+	{
+	NodeList<T> temp=new NodeList<T>();
+	temp.identityNode=N;
 	adjacencyList.put(N.tag,temp);
+	return true;
+	}
+	else
+	return false;	
+	}
+	
+	public void makeConnection()
+	{
+		
 		
 	}
 
